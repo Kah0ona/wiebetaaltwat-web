@@ -27,7 +27,7 @@
 (defn lazy-contains? [col key]
   (some #{key} col))
 
-
+(def errmsg "De input file bevat een fout") 
 (defn calculate-balance [current-balance line]
   "current-balance is a map of balances for each participant, and line is a line from the input file. Returns an updated balance map"
   (if (or (.startsWith line ";") (empty? line)) 
@@ -35,6 +35,7 @@
     current-balance
     (let [ ; else ...
       pieces (s/split line #",")
+      _ (if (not= (count pieces) 4) (throw (Exception. errmsg)))
       declarer (keyword (s/trim (first pieces)))
       amount   (* 100 (read-string (nth pieces 1))) ; //make it in cents
       desc     (nth pieces 2)
@@ -76,7 +77,7 @@
     lines (parse-input-in-list input-file)
     initial-balance (parse-participants (first lines))
     declarations (rest lines)]
-   (reduce #(calculate-balance %1 %2) initial-balance declarations)))
+     (reduce #(calculate-balance %1 %2) initial-balance declarations)))
 
 (defn get-entry-string [string balance-entry]
   (str string (name (key balance-entry)) ": \t € " (format "%.2f" (/ (val balance-entry) 100) ) "\n"))

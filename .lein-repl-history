@@ -19,3 +19,15 @@ exit
 (use 'wiebetaaltwat-web.repl)
 (start-server)
 exit
+(use 'wiebetaaltwat-web.repl)
+(start-server)
+exit
+(use 'wiebetaaltwat-web.repl)
+(start-server)
+exit
+(use 'wiebetaaltwat-web.repl)
+(start-server)
+exit
+(use 'wiebetaaltwat-web.repl)
+(start-server)
+exit
