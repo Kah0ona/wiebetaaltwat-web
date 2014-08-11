@@ -27,7 +27,6 @@
 (defn lazy-contains? [col key]
   (some #{key} col))
 
-(def errmsg "De input file bevat een fout") 
 (defn calculate-balance [current-balance line]
   "current-balance is a map of balances for each participant, and line is a line from the input file. Returns an updated balance map"
   (if (or (.startsWith line ";") (empty? line)) 
