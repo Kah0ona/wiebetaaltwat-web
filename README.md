@@ -1,19 +1,13 @@
-# wiebetaaltwat-web
+# wiebetaaltwat web app
 
-FIXME
+A clojure program that calculates a balance of a group of people who spend money in an event. 
+Functionally it's a clone of 'wiebetaaltwat.nl'. Doesn't deal with form inputs, just parses an input file.
 
-## Prerequisites
+Built for fun, as a way to learn (web development in) Clojure.
 
-You will need [Leiningen][1] 1.7.0 or above installed.
+## Usage
 
-[1]: https://github.com/technomancy/leiningen
+It's just a compojure app, so, use `lein repl`, then `(use 'wiebetaaltwat-web.repl)`, then `(start-server)`
 
-## Running
 
-To start a web server for the application, run:
 
-    lein ring server
-
-## License
-
-Copyright © 2014 FIXME
