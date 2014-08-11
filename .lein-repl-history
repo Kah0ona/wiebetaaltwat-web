@@ -1,0 +1,21 @@
+(use 'wiebetaaltwat-web.repl)
+(start-server)
+(home)
+(use 'wiebetaaltwat-web.routes.home)
+(home)
+exit
+(use 'wiebetaaltwat-web.repl)
+(start-server)
+exit
+(use 'wiebetaaltwat-web.repl)
+(start-server)
+exit
+(use 'wiebetaaltwat-web.repl)
+(start-server)
+exit
+(use 'wiebetaaltwat-web.repl)
+(start-server)
+exit
+(use 'wiebetaaltwat-web.repl)
+(start-server)
+exit
